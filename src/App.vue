@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <navbar></navbar>
-    <transition name="fade" mode="out-in" enter-active-class="animated fadeIn mediumDuration" leave-active-class="animated fadeOut mediumDuration">
+    <transition name="fade" mode="out-in" enter-active-class="animated fadeIn mediumDuration" leave-active-class="animated fadeOut shortDuration">
       <router-view/>
     </transition>
   </div>
@@ -33,6 +33,10 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+  }
+
+  .shortDuration {
+    animation-duration: 0.1s;
   }
 
   .mediumDuration {

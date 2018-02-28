@@ -37,19 +37,20 @@ export default {
 
 <style scoped lang="scss">
 .contact-image {
-    height: 470px;
+    // height: 470px;
+    height: 40vh;
     width: 100%;
     background-image: url('../assets/contact.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 95%;
     animation-name: contact-image-enter;
-    animation-duration: 0.5s;
+    animation-duration: 0.75s;
 }
 
 @keyframes contact-image-enter {
-    from {height: 500px;}
-    to {height: 470px;}
+    from {height: 44vh;}
+    to {height: 40vh;}
 }
 
 .gmap {
