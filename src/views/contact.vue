@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <div class="contact-image"></div>
+        <div class="top-view-image contact-image"></div>
         <div class="container">
             <div class="row contact-box">
                 <div class="col-sm-12 col-md-6 contact-info-horizontal">
@@ -37,20 +37,8 @@ export default {
 
 <style scoped lang="scss">
 .contact-image {
-    // height: 470px;
-    height: 40vh;
-    width: 100%;
     background-image: url('../assets/contact.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position-y: 95%;
-    animation-name: contact-image-enter;
-    animation-duration: 0.75s;
-}
-
-@keyframes contact-image-enter {
-    from {height: 44vh;}
-    to {height: 40vh;}
 }
 
 .gmap {
@@ -60,6 +48,7 @@ export default {
   min-height: 300px;
   margin-top: 40px;
   margin-bottom: 40px;
+  text-align: center;
 }
 .contact-info-horizontal {
   display: flex;
