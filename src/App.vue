@@ -23,6 +23,7 @@ export default {
   @import "../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css";
   // @import url('https://fonts.googleapis.com/css?family=Alef');
   @import url('https://fonts.googleapis.com/css?family=Encode%20Sans%20Semi%20Expanded');
+  @import 'const.scss';
 
 
   html {
@@ -31,7 +32,7 @@ export default {
 
   body{
     min-height: 100%;
-    background-color: #f8f9fa;
+    background-color: $background-color;
   }
   
   #app {
