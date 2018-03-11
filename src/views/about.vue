@@ -2,7 +2,7 @@
     <div class="about">
         <loader v-if="!loaded"></loader>
 
-        <div v-else>
+        <div v-show="loaded">
             <div class="top-view-image about-image"></div>
             <div class="container">
                 <div class="row text-box">
@@ -36,6 +36,7 @@
 
 <script>
 import loader from "@/components/Loader";
+import ImagesPreload from "../services/imagesPreload";
 
 export default {
   name: "about",
@@ -51,25 +52,8 @@ export default {
     };
   },
   created: function() {
-    var images = [];
-    var loaded = 0;
-    var that = this;
-
-    for (var i = 0, length = that.imgSrc.length; i < length; i++) {
-      const currentImg = new Image();
-      currentImg.onload = function() {
-        loaded++
-        if(loaded >= length){
-            that.loaded = true;
-        }
-        console.log("Asd", that.loaded);
-      };
-      currentImg.onerror = function(e) {
-        console.log(e);
-      };
-      currentImg.src = that.imgSrc[i];
-      images.push(currentImg);
-    }
+    const ImgPreload = new ImagesPreload();
+    ImgPreload.preloadImages(this.imgSrc, { timeout: 3000 }).then(() => this.loaded = true);
   }
 };
 </script>

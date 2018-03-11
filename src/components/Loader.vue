@@ -1,7 +1,9 @@
 <template>
-  <div class="loader-container">
-    <div class="loader"></div>
-  </div>
+  <transition name="fade" mode="out-in" enter-active-class="animated fadeIn shortDuration" leave-active-class="animated fadeOut shortDuration">
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -11,40 +13,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../mixins.scss";
 @import "../const.scss";
 
 $size: 200px;
-
-@mixin transform($value) {
-  -webkit-transform: $value;
-  transform: $value;
-}
-
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-  @-moz-keyframes #{$animation-name} {
-    @content;
-  }
-  @-ms-keyframes #{$animation-name} {
-    @content;
-  }
-  @-o-keyframes #{$animation-name} {
-    @content;
-  }
-  @keyframes #{$animation-name} {
-    @content;
-  }
-}
-
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
 
 @include keyframes(loader-spin-left) {
   0% {
@@ -123,6 +95,14 @@ $size: 200px;
     left: calc(50% - #{$size}/2);
   }
 }
+
+// .shortDuration {
+//     animation-duration: 10s;
+//   }
+
+//   .mediumDuration {
+//     animation-duration: 4s;
+//   }
 
 .loader-container {
   background-color: $background-color;   
