@@ -2,7 +2,7 @@
     <div class="about">
         <loader v-if="!loaded"></loader>
 
-        <div v-show="loaded">
+        <div v-else>
             <div class="top-view-image about-image"></div>
             <div class="container">
                 <div class="row text-box">
