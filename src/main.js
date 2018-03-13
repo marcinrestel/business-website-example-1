@@ -6,6 +6,11 @@ import BootstrapVue from 'bootstrap-vue'
 import router from './router'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
+import 'font-awesome/css/font-awesome.css' 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-vue/dist/bootstrap-vue.min.css";
+import "animate.css/animate.min.css";
+
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 

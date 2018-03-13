@@ -18,13 +18,8 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "static/animate.min.css";
-  @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-  @import "../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css";
-  // @import url('https://fonts.googleapis.com/css?family=Alef');
   @import url('https://fonts.googleapis.com/css?family=Encode%20Sans%20Semi%20Expanded');
   @import 'const.scss';
-
 
   html {
     overflow-y: scroll;
