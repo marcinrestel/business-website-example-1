@@ -4,7 +4,7 @@
 
         <div v-else>
             <b-carousel id="carousel"
-                style="text-shadow: 1px 1px 2px #333;"
+                class="carousel-dark"
                 controls
                 indicators
                 background="#ababab"
@@ -14,21 +14,30 @@
                 @sliding-end="onSlideEnd"
             >
                 <b-carousel-slide>
-                    <img slot="img" class="d-block img-fluid slide-fullscreen-image"
+                    <img slot="img" class="d-block img-fluid slide-fullscreen-image blur"
                         src="../assets/product/1.jpeg" alt="image slot">
-                        <h1>Business Analytics</h1>
+                        <div class="d-flex flex-column justify-content-center carousel-height">
+                            <h1>Business Analytics</h1>
+                            <p> Ipsum dolor sit amet! Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est!</p>
+                        </div>
                 </b-carousel-slide>
 
                 <b-carousel-slide>
-                    <img slot="img" class="d-block img-fluid slide-fullscreen-image"
+                    <img slot="img" class="d-block img-fluid slide-fullscreen-image blur"
                         src="../assets/product/2.jpeg" alt="image slot">
-                        <h1>Process Optimization</h1>
+                        <div class="d-flex flex-column justify-content-center carousel-height">
+                            <h1>Process Optimization</h1>
+                            <p>Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat...</p>
+                        </div>
                 </b-carousel-slide>
 
                 <b-carousel-slide>
-                    <img slot="img" class="d-block img-fluid slide-fullscreen-image"
+                    <img slot="img" class="d-block img-fluid slide-fullscreen-image blur"
                         src="../assets/product/3.jpeg" alt="image slot">
-                        <h1>Predictive modelling</h1>
+                        <div class="d-flex flex-column justify-content-center carousel-height">
+                            <h1>Predictive modelling</h1>
+                            <p>Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.</p>
+                        </div>
                 </b-carousel-slide>
             </b-carousel>
 
@@ -109,16 +118,26 @@ export default {
   },
   created: function() {
     const ImgPreload = new ImagesPreload();
-    ImgPreload.preloadImages(this.imgSrc, { timeout: 3000 }).then(() => this.loaded = true);
+    ImgPreload.preloadImages(this.imgSrc, { timeout: 3000 }).then(
+      () => (this.loaded = true)
+    );
   }
 };
 </script>
 
-<style scoped>
-    .slide-fullscreen-image {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
+<style scoped lang="scss">
+.carousel-height {
+  height: calc(100vh - 20px);
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.slide-fullscreen-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
 </style>
 

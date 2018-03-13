@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '../const.scss';
+    @import '../scss/const.scss';
 
     .nav-link.active::after{
         content: '';

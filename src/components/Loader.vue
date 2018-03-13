@@ -13,8 +13,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../mixins.scss";
-@import "../const.scss";
+@import "../scss/mixins.scss";
+@import "../scss/const.scss";
 
 $size: 200px;
 

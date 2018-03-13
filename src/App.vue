@@ -19,7 +19,8 @@ export default {
 
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Encode%20Sans%20Semi%20Expanded');
-  @import 'const.scss';
+  @import 'scss/const.scss';
+  @import 'scss/carousel-dark.scss';
 
   html {
     overflow-y: scroll;
