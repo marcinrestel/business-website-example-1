@@ -22,7 +22,7 @@ export default new Router({
       component: contact
     },
     {
-      path: '/index',
+      path: '/',
       name: 'index',
       component: index
     }

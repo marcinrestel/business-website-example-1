@@ -24,7 +24,7 @@
 
                 <b-carousel-slide>
                     <img slot="img" class="d-block img-fluid slide-fullscreen-image blur"
-                        src="../assets/product/2.jpeg" alt="image slot">
+                        src="../assets/product/2.jpg" alt="image slot">
                         <div class="d-flex flex-column justify-content-center carousel-height">
                             <h1>Process Optimization</h1>
                             <p>Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat...</p>
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row text-box">
                     <div class="col-sm-12">
                         <h1 class="title-line">Process Optimization</h1>
@@ -84,7 +84,7 @@
                         <p>Consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -102,7 +102,7 @@ export default {
       sliding: null,
       imgSrc: [
         require("../assets/product/1.jpeg"),
-        require("../assets/product/2.jpeg"),
+        require("../assets/product/2.jpg"),
         require("../assets/product/3.jpeg")
       ],
       loaded: false

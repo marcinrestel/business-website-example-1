@@ -1,12 +1,12 @@
 <template>
     <b-navbar toggleable="sm" type="light" variant="light" fixed="top">
         <div class="container">
-            <b-navbar-brand router-link to="/index">Fake Company</b-navbar-brand>
+            <b-navbar-brand router-link to="/">Fake Company</b-navbar-brand>
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
             <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item router-link to="/index">Product</b-nav-item>
+                    <b-nav-item router-link to="/">Product</b-nav-item>
                     <b-nav-item router-link to="/about">Company</b-nav-item>
                     <b-nav-item router-link to="/contact">Contact</b-nav-item>
                 </b-navbar-nav>
